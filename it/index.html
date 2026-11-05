@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boogs77 Progetti 65C02</title>
+<meta name="description" content="Computer a 8 bit autocostruiti attorno al W65C02S: il computer modulare BO6502, il miniPET e il miniVIC, con BIOS, giochi, applicazioni e un emulatore nel browser.">
+<link rel="alternate" hreflang="en" href="https://boogs77.github.io/">
+<link rel="alternate" hreflang="it" href="https://boogs77.github.io/it/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c2410c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='13' font-weight='700' text-anchor='middle' fill='white'%3E65%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Boogs77<span>/65C02</span></a>
+    <nav class="nav">
+      <a href="#macchine">Computer</a>
+      <a href="#bo6502">Moduli</a>
+      <a href="#software">Software</a>
+      <a href="#emulatore">Emulatore</a>
+      <a href="#laboratorio">Laboratorio</a>
+      <a href="#storia">Storia</a>
+    </nav>
+    <a class="lang" href="../" hreflang="en" lang="en">English</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow">W65C02S · TMS9918A · AY-3-8910</p>
+    <h1>Computer a 8 bit autocostruiti attorno al 65C02</h1>
+    <p class="lead">Tutto è partito da un computer modulare su backplane, il <b>BO6502</b>. Dalle sue schede sono nati due computer completi, il <b>miniPET</b> e il <b>miniVIC</b>. Ognuno ha il suo BIOS. Il miniVIC ha anche una raccolta di giochi, applicazioni da ufficio e un emulatore che fa girare tutto nel browser.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://boogs77.github.io/BO6502-miniVIC-emulator/">▶ Gioca con il miniVIC nel browser</a>
+      <a class="btn" href="https://github.com/Boogs77">Profilo GitHub</a>
+    </div>
+
+    <ul class="stats">
+      <li><b>3</b><span>computer: BO6502, miniPET, miniVIC</span></li>
+      <li><b>16</b><span>schede modulo del BO6502</span></li>
+      <li><b>28</b><span>giochi in assembly 65C02</span></li>
+      <li><b>8</b><span>applicazioni da ufficio</span></li>
+    </ul>
+
+    <figure class="hero-figure">
+      <img src="../img/minivic_pcb.jpg" alt="Il computer a scheda singola miniVIC: render del PCB con CPU, zoccolo ZIF della ROM, connettori video, audio e joystick" width="1400" height="738">
+      <figcaption>PCB del miniVIC ver 1.0</figcaption>
+    </figure>
+  </div>
+
+  <!-- ===================== COMPUTER ===================== -->
+  <section id="macchine">
+    <div class="wrap">
+      <h2>I computer</h2>
+      <p class="section-lead">I tre computer hanno lo stesso progetto di base: CPU <b>W65C02S</b>, 32KB di RAM a <code>$0000-$7FFF</code>, una EEPROM da 32KB a <code>$8000-$FFFF</code>, e i dispositivi di I/O decodificati dentro l'area della ROM.</p>
+
+      <div class="grid three">
+        <article class="card">
+          <div class="media"><img src="../img/m_backplate.jpg" alt="Backplate del BO6502 con cinque slot" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">modulare</span>
+            <h3>BO6502</h3>
+            <p>Un computer modulare su un bus a 39 pin. Ogni funzione è una scheda separata inserita in un backplate, così il sistema si può ricomporre ed estendere.</p>
+            <ul>
+              <li>Clock selezionabile: 2 MHz, 1 MHz, 500 kHz</li>
+              <li>Schede RAM e ROM con jumper per lasciare spazio all'I/O</li>
+              <li>Schede video, seriale, tastiera, SD card, audio, joystick e LCD</li>
+            </ul>
+            <a class="more" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer">Repository BO6502 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media"><img src="../img/minipet.jpg" alt="Il miniPET: un piccolo computer beige con schermo e tastiera integrati" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">tutto in uno</span>
+            <h3>miniPET</h3>
+            <p>Un computer compatto ispirato all'aspetto del Commodore PET, in un case stampato in 3D disegnato con Fusion 360.</p>
+            <ul>
+              <li>Display grafico BIGLCD a <code>$D19X</code></li>
+              <li>Tastiera a <code>$D18X</code>, porta seriale a <code>$CXXX</code></li>
+              <li>WozMon, Microsoft BASIC e quattro giochi classici in italiano e inglese</li>
+            </ul>
+            <a class="more" href="https://github.com/Boogs77/miniPET_65c02">Repository miniPET →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media"><img src="../img/minivic_3d.jpg" alt="La scheda del miniVIC in 3D, vista di lato" loading="lazy"></div>
+          <div class="body">
+            <span class="tag">arcade</span>
+            <h3>miniVIC</h3>
+            <p>Un computer arcade a scheda singola. Mette i moduli del BO6502 su un solo PCB, con video a colori, audio stereo e due joystick.</p>
+            <ul>
+              <li>Video TMS9918A: 256x192, 16 colori, 32 sprite</li>
+              <li>Due AY-3-8910 per l'audio stereo</li>
+              <li>Tastiera PS/2, due joystick tipo Sega, SD card, porta seriale</li>
+            </ul>
+            <a class="more" href="https://github.com/Boogs77/miniVIC_65c02">Repository miniVIC →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MODULI ===================== -->
+  <section id="bo6502">
+    <div class="wrap">
+      <h2>I moduli del BO6502</h2>
+      <p class="section-lead">Ogni blocco del miniPET e del miniVIC nasce come scheda del BO6502. Ognuna ha la sua cartella nel repository del BO6502, con schema, PCB e note.</p>
+
+      <div class="modules">
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20CPU"><img src="../img/m_cpu.jpg" alt="" loading="lazy"><div><b>CPU</b><span>W65C02S</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20RESET"><img src="../img/m_reset.jpg" alt="" loading="lazy"><div><b>Reset e clock</b><span>NE555 · 0.5-2 MHz</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20RAM"><img src="../img/m_ram.jpg" alt="" loading="lazy"><div><b>RAM</b><span>32KB · $0000-$7FFF</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20ROM"><img src="../img/m_rom.jpg" alt="" loading="lazy"><div><b>ROM</b><span>32KB · $8000-$FFFF</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20VDU"><img src="../img/m_vdu.jpg" alt="" loading="lazy"><div><b>VDU</b><span>TMS9918A · $BXXX</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20SERIAL"><img src="../img/m_serial.jpg" alt="" loading="lazy"><div><b>Seriale</b><span>W65C51 · $CXXX</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20KEYb"><img src="../img/m_keyb.jpg" alt="" loading="lazy"><div><b>Tastiera</b><span>W65C22 · $D18X</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20BIGLCD"><img src="../img/m_biglcd.jpg" alt="" loading="lazy"><div><b>Big LCD</b><span>160x128 · $D19X</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20SDCard"><img src="../img/m_sdcard.jpg" alt="" loading="lazy"><div><b>SD card</b><span>SPI · $D1BX</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20AUDIO"><img src="../img/m_audio.jpg" alt="" loading="lazy"><div><b>Audio</b><span>2x AY-3-8910</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20JOYSTICK"><img src="../img/m_joystick.jpg" alt="" loading="lazy"><div><b>Joystick</b><span>W65C22 · 2x DB9</span></div></a>
+        <a class="module" href="https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20BACKPLATE"><img src="../img/m_backplate.jpg" alt="" loading="lazy"><div><b>Backplate</b><span>bus a 39 pin</span></div></a>
+      </div>
+      <p class="note">Nel repository ci sono anche il Bridge Connector tra backplate, la vecchia scheda LCD 16x2 con tastiera, la scheda di test a LED e la scheda MONITOR.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SOFTWARE ===================== -->
+  <section id="software">
+    <div class="wrap">
+      <h2>Il software del miniVIC</h2>
+      <p class="section-lead">Tutto il software è scritto in assembly 65C02. I programmi si caricano dalla SD card a <code>$1000</code> e chiamano il BIOS attraverso una jump table fissa a <code>$FD00</code>.</p>
+
+      <h3>Giochi</h3>
+      <p class="section-lead" style="margin-bottom:16px">Ventotto giochi: omaggi ai classici arcade del 1976-1983 e titoli originali. Usano la grafica a tile e sprite del TMS9918A e la musica stereo dei due AY-3-8910. Ogni gioco salva i suoi otto punteggi migliori sulla SD card.</p>
+      <div class="shots">
+        <figure><img src="../img/g_robert.png" alt="Robert: gioco isometrico a salti sui cubi" loading="lazy"><figcaption>Robert</figcaption></figure>
+        <figure><img src="../img/g_cloud_raider.png" alt="Cloud Raider: sparatutto isometrico" loading="lazy"><figcaption>Cloud Raider</figcaption></figure>
+        <figure><img src="../img/g_crystal_gardens.png" alt="Crystal Gardens: labirinto isometrico" loading="lazy"><figcaption>Crystal Gardens</figcaption></figure>
+        <figure><img src="../img/g_dune_ranger.png" alt="Dune Ranger: gioco a scorrimento con un rover" loading="lazy"><figcaption>Dune Ranger</figcaption></figure>
+        <figure><img src="../img/g_core_runner.png" alt="Core Runner: corsa spaziale e piattaforme" loading="lazy"><figcaption>Core Runner</figcaption></figure>
+        <figure><img src="../img/g_deep_space_miner.png" alt="Deep Space Miner: sparatutto minerario nello spazio" loading="lazy"><figcaption>Deep Space Miner</figcaption></figure>
+        <figure><img src="../img/g_special_forces.png" alt="Special Forces: azione a scorrimento" loading="lazy"><figcaption>Special Forces</figcaption></figure>
+        <figure><img src="../img/g_tank.png" alt="Tank vs Tank: due carri armati sul campo di battaglia" loading="lazy"><figcaption>Tank vs Tank</figcaption></figure>
+      </div>
+      <p><a href="https://github.com/Boogs77/miniVIC_games"><b>Repository miniVIC Games →</b></a></p>
+
+      <h3 style="margin-top:36px">Applicazioni</h3>
+      <p class="section-lead" style="margin-bottom:16px">Otto applicazioni da ufficio nello spirito dei primi anni '80, in modo testo a 40 colonne. I documenti si salvano sulla SD card.</p>
+      <div class="shots apps">
+        <figure><img src="../img/a_write_typing.png" alt="Editor di testo miniVIC WRITE" loading="lazy"><figcaption>WRITE · editor di testo</figcaption></figure>
+        <figure><img src="../img/a_calc_formulas.png" alt="Foglio elettronico miniVIC CALC" loading="lazy"><figcaption>CALC · foglio elettronico</figcaption></figure>
+        <figure><img src="../img/a_file_card.png" alt="Schedario miniVIC FILE" loading="lazy"><figcaption>FILE · schedario</figcaption></figure>
+        <figure><img src="../img/a_desk_calendar.png" alt="Calendario di miniVIC DESK" loading="lazy"><figcaption>DESK · calcolatrice, calendario</figcaption></figure>
+        <figure><img src="../img/a_mon_disasm.png" alt="Monitor in linguaggio macchina miniVIC MON" loading="lazy"><figcaption>MON · monitor</figcaption></figure>
+        <figure><img src="../img/a_asm_ok.png" alt="Assembler miniVIC ASM" loading="lazy"><figcaption>ASM · assembler 65C02</figcaption></figure>
+      </div>
+      <p>Completano la serie TERM (terminale seriale) e DISK (gestione della SD card). <a href="https://github.com/Boogs77/miniVIC_apps"><b>Repository miniVIC Apps →</b></a></p>
+
+      <h3 style="margin-top:36px">BIOS</h3>
+      <div class="grid two">
+        <div>
+          <p>La ROM del miniVIC contiene <b>WozMon</b>, il <b>Microsoft BASIC 1977</b> e un BIOS con un menu di avvio. Il menu ha quattro voci: monitor, BASIC, programmi della SD card e informazioni di sistema. La versione attuale è la <b>03.11.26 KEYB/SD</b>.</p>
+          <ul>
+            <li>Tastiera PS/2 estesa: frecce, tasti funzione, Ctrl, Alt</li>
+            <li>Lettura e scrittura su SD card SDSC e SDHC</li>
+            <li>Menu dei programmi della SD con pagine e sottomenu per giochi e applicazioni</li>
+          </ul>
+          <p><a href="https://github.com/Boogs77/miniVIC_bios"><b>Repository miniVIC BIOS →</b></a></p>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Indirizzo</th><th>Dispositivo</th></tr></thead>
+            <tbody>
+              <tr><td class="addr">$0000-$7FFF</td><td>RAM 32KB</td></tr>
+              <tr><td class="addr">$8000-$AFFF</td><td>ROM: BASIC e BIOS</td></tr>
+              <tr><td class="addr">$B000</td><td>Video TMS9918A, interrupt su NMI</td></tr>
+              <tr><td class="addr">$C000</td><td>Porta seriale W65C51</td></tr>
+              <tr><td class="addr">$D180</td><td>VIA della tastiera</td></tr>
+              <tr><td class="addr">$D380</td><td>2x AY-3-8910</td></tr>
+              <tr><td class="addr">$D580</td><td>VIA dei joystick</td></tr>
+              <tr><td class="addr">$DD80</td><td>VIA della SD card</td></tr>
+              <tr><td class="addr">$E000-$FFFF</td><td>ROM: menu, jump table, WozMon</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EMULATORE ===================== -->
+  <section id="emulatore">
+    <div class="wrap">
+      <div class="grid two" style="align-items:center">
+        <div>
+          <h2>Provalo nel browser</h2>
+          <p>Il <b>BO6502 · miniVIC Emulator</b> fa girare nel browser la vera ROM del BIOS: si possono usare i giochi e le applicazioni senza l'hardware.</p>
+          <ul>
+            <li>Si sceglie tra BO6502 (schede in un rack) e miniVIC</li>
+            <li>TMS9918A accurato e due AY-3-8910 in stereo</li>
+            <li>Tastiera e joystick sullo schermo; funzionano anche i gamepad</li>
+            <li>SD card emulata con tutti i giochi e le applicazioni</li>
+            <li>Debugger con CPU, memoria, registri del VDP, delle VIA e degli AY</li>
+          </ul>
+          <div class="actions" style="margin-top:18px">
+            <a class="btn primary" href="https://boogs77.github.io/BO6502-miniVIC-emulator/">▶ Apri l'emulatore</a>
+            <a class="btn" href="https://github.com/Boogs77/BO6502-miniVIC-emulator">Codice sorgente</a>
+          </div>
+        </div>
+        <figure class="card" style="margin:0">
+          <img src="../img/emulator.jpg" alt="L'emulatore con Tank vs Tank e il pannello audio dei due AY" loading="lazy" width="1400" height="972">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LABORATORIO ===================== -->
+  <section id="laboratorio">
+    <div class="wrap">
+      <h2>Laboratorio e banchi di prova</h2>
+      <p class="section-lead">Progetti più piccoli, usati per provare un chip da solo prima di disegnarne la scheda, o per collegare i computer al mondo esterno.</p>
+      <div class="grid three">
+        <article class="card">
+          <div class="media photo"><img src="../img/webserver.jpg" alt="Pagina del WebServerESP-6205 nel browser, con schermo e tastiera in stile PET" loading="lazy"></div>
+          <div class="body">
+            <h3>WebServerESP-6205</h3>
+            <p>Un ponte con ESP32 tra la porta seriale del BO6502 e il Wi-Fi. Offre un terminale in stile PET che funziona in qualsiasi browser.</p>
+            <a class="more" href="https://github.com/Boogs77/WebServerESP-6205">Repository →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media photo"><img src="../img/vdu_hello.jpg" alt="Prova del TMS9918A con un testo su un monitor" loading="lazy"></div>
+          <div class="body">
+            <h3>Prova VDU con Arduino</h3>
+            <p>Un TMS9918A comandato da un Arduino: il primo passo verso la scheda VDU.</p>
+            <a class="more" href="https://github.com/Boogs77/VDU_arduino_test">Repository →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media photo"><img src="../img/biglcd_wozmon.jpg" alt="Display Big LCD con un dump di memoria di WozMon" loading="lazy"></div>
+          <div class="body">
+            <h3>Prove del Big LCD</h3>
+            <p>Prove del display RA6963 da 160x128, prima direttamente da Arduino, poi attraverso una VIA 65C22.</p>
+            <a class="more" href="https://github.com/Boogs77/BIGLCD_test">BIGLCD_test →</a>
+            <a class="more" style="padding-top:0" href="https://github.com/Boogs77/BIGLCD-65c22_test">BIGLCD-65c22_test →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STORIA ===================== -->
+  <section id="storia">
+    <div class="wrap">
+      <h2>La storia</h2>
+      <p class="section-lead">Come è cresciuto il progetto, dalle prime schede pubblicate al miniVIC.</p>
+      <ol class="timeline">
+        <li><time>2024-10</time><b>Pubblicato il BO6502</b><p>Il computer modulare: CPU, RAM, ROM, backplate e le prime schede di I/O.</p></li>
+        <li><time>2025-03</time><b>Il TMS9918A sul banco</b><p>Prove video con Arduino, poi la scheda VDU.</p></li>
+        <li><time>2025-05</time><b>Big LCD</b><p>Prove del display RA6963, poi la scheda Big LCD.</p></li>
+        <li><time>2026-02</time><b>miniPET</b><p>Il primo computer completo, con il suo case stampato in 3D.</p></li>
+        <li><time>2026-03</time><b>Terminale Wi-Fi</b><p>Il WebServerESP-6205 collega la porta seriale al browser.</p></li>
+        <li><time>2026-09</time><b>Menu dei programmi su SD</b><p>Il BIOS del miniVIC carica i programmi dalla SD card, con un menu su più pagine.</p></li>
+        <li><time>2026-10</time><b>Emulatore e giochi</b><p>Vanno online l'emulatore nel browser e la raccolta di giochi del miniVIC.</p></li>
+        <li><time>2026-10</time><b>BIOS KEYB/SD e applicazioni</b><p>Tastiera estesa, scrittura su tutte le SD card e otto applicazioni da ufficio.</p></li>
+        <li><time>2026-11</time><b>L'hardware del miniVIC</b><p>Pubblicati schema, PCB e mappa di memoria, con il BIOS 03.11.26 KEYB/SD.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><i>Created by Boogs77 - 2026</i></span>
+    <span>Il Microsoft BASIC 1977 (da <a href="https://github.com/mist64/msbasic">mist64/msbasic</a>) e WozMon sono usati a scopo didattico e hobbistico. I giochi sono omaggi amatoriali senza fini commerciali.</span>
+  </div>
+</footer>
+
+</body>
+</html>
