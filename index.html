@@ -99,7 +99,7 @@
             <ul>
               <li>TMS9918A video: 256x192, 16 colors, 32 sprites</li>
               <li>Two AY-3-8910 chips for stereo sound</li>
-              <li>PS/2 keyboard, two Sega-style joysticks, SD card, serial port</li>
+              <li>DIN5 keyboard, two Sega-style joysticks, SD card, serial port</li>
             </ul>
             <a class="more" href="https://github.com/Boogs77/miniVIC_65c02">miniVIC repository →</a>
           </div>
@@ -167,9 +167,9 @@
       <h3 style="margin-top:36px">BIOS</h3>
       <div class="grid two">
         <div>
-          <p>The miniVIC ROM holds <b>WozMon</b>, <b>Microsoft BASIC 1977</b> and a BIOS with a boot menu. The menu has four entries: monitor, BASIC, SD card programs and system information. The current version is <b>03.11.26 KEYB/SD</b>.</p>
+          <p>The miniVIC ROM holds <b>WozMon</b>, <b>Microsoft BASIC 1977</b> and a BIOS with a boot menu. The menu has four entries: monitor, BASIC, SD card programs and system information. The current version is <b>16.11.26 KEYB/SD R2</b>.</p>
           <ul>
-            <li>Extended PS/2 keyboard: arrows, function keys, Ctrl, Alt</li>
+            <li>Extended keyboard mode: arrows, function keys, Ctrl, Alt</li>
             <li>SD read and write on SDSC and SDHC cards</li>
             <li>SD programs menu with pages and submenus for games and applications</li>
           </ul>
@@ -192,6 +192,25 @@
           </table>
         </div>
       </div>
+
+      <h3 style="margin-top:36px">Operation manual</h3>
+      <div class="grid two" style="align-items:center">
+        <div>
+          <p>The <b>miniVIC Operation Manual</b> follows the style of the 1976 Apple-1 manual. It describes the whole machine for BIOS <b>16.11.26 KEYB/SD R2</b>: memory and device maps, address decoding, the schematic, the bill of materials, every chip register, the BIOS menus, WozMon, Microsoft BASIC, the applications, the games and the SD card format.</p>
+          <p>It comes in English and Italian, in a screen edition (cream paper, colour pictures) and a print edition (white paper, grey pictures).</p>
+          <div class="actions" style="margin-top:18px">
+            <a class="btn primary" href="https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_EN.pdf">English PDF</a>
+            <a class="btn" href="https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_IT.pdf">Italian PDF</a>
+            <a class="btn" href="https://github.com/Boogs77/miniVIC-manual">Print editions and sources</a>
+          </div>
+        </div>
+        <figure class="card" style="margin:0;max-width:340px;justify-self:center">
+          <img src="img/manual_en.jpg" alt="Cover of the miniVIC Operation Manual" loading="lazy" width="910" height="1287">
+        </figure>
+      </div>
+
+      <h3 style="margin-top:36px">Music and SD card</h3>
+      <p><a href="https://github.com/Boogs77/miniVIC_music"><b>miniVIC Music</b></a> holds songs for the two AY-3-8910 chips, as programs for the SD card. <a href="https://github.com/Boogs77/bo6502-SDbuilder"><b>BO6502 SD Builder</b></a> is a set of Python tools that pack the games, applications and songs into the RAW SD card image the BIOS menu reads. The emulator's default SD is built with it.</p>
     </div>
   </section>
 
@@ -271,6 +290,7 @@
         <li><time>2026-10</time><b>Emulator and games</b><p>The browser emulator and the miniVIC game collection go online.</p></li>
         <li><time>2026-10</time><b>BIOS KEYB/SD and applications</b><p>Extended keyboard, SD write on all cards, and eight office applications.</p></li>
         <li><time>2026-11</time><b>miniVIC hardware</b><p>Schematic, PCB and memory map published, with BIOS 03.11.26 KEYB/SD.</p></li>
+        <li><time>2026-11</time><b>Operation manual</b><p>The miniVIC manual in English and Italian, with BIOS 16.11.26 KEYB/SD R2; the SD card builder goes public.</p></li>
       </ol>
     </div>
   </section>

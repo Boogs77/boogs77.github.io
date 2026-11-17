@@ -99,7 +99,7 @@
             <ul>
               <li>Video TMS9918A: 256x192, 16 colori, 32 sprite</li>
               <li>Due AY-3-8910 per l'audio stereo</li>
-              <li>Tastiera PS/2, due joystick tipo Sega, SD card, porta seriale</li>
+              <li>Tastiera DIN5, due joystick tipo Sega, SD card, porta seriale</li>
             </ul>
             <a class="more" href="https://github.com/Boogs77/miniVIC_65c02">Repository miniVIC →</a>
           </div>
@@ -167,9 +167,9 @@
       <h3 style="margin-top:36px">BIOS</h3>
       <div class="grid two">
         <div>
-          <p>La ROM del miniVIC contiene <b>WozMon</b>, il <b>Microsoft BASIC 1977</b> e un BIOS con un menu di avvio. Il menu ha quattro voci: monitor, BASIC, programmi della SD card e informazioni di sistema. La versione attuale è la <b>03.11.26 KEYB/SD</b>.</p>
+          <p>La ROM del miniVIC contiene <b>WozMon</b>, il <b>Microsoft BASIC 1977</b> e un BIOS con un menu di avvio. Il menu ha quattro voci: monitor, BASIC, programmi della SD card e informazioni di sistema. La versione attuale è la <b>16.11.26 KEYB/SD R2</b>.</p>
           <ul>
-            <li>Tastiera PS/2 estesa: frecce, tasti funzione, Ctrl, Alt</li>
+            <li>Modo tastiera esteso: frecce, tasti funzione, Ctrl, Alt</li>
             <li>Lettura e scrittura su SD card SDSC e SDHC</li>
             <li>Menu dei programmi della SD con pagine e sottomenu per giochi e applicazioni</li>
           </ul>
@@ -192,6 +192,25 @@
           </table>
         </div>
       </div>
+
+      <h3 style="margin-top:36px">Manuale d'uso</h3>
+      <div class="grid two" style="align-items:center">
+        <div>
+          <p>Il <b>manuale d'uso del miniVIC</b> riprende lo stile del manuale dell'Apple-1 del 1976. Descrive tutta la macchina con il BIOS <b>16.11.26 KEYB/SD R2</b>: mappe della memoria e dei dispositivi, decodifica degli indirizzi, schema elettrico, elenco dei componenti, tutti i registri dei chip, i menu del BIOS, WozMon, il Microsoft BASIC, le applicazioni, i giochi e il formato della SD card.</p>
+          <p>È in italiano e in inglese, in un'edizione per lo schermo (carta color crema, immagini a colori) e una per la stampa (carta bianca, immagini in grigio).</p>
+          <div class="actions" style="margin-top:18px">
+            <a class="btn primary" href="https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_IT.pdf">PDF in italiano</a>
+            <a class="btn" href="https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_EN.pdf">PDF in inglese</a>
+            <a class="btn" href="https://github.com/Boogs77/miniVIC-manual">Edizioni da stampa e sorgenti</a>
+          </div>
+        </div>
+        <figure class="card" style="margin:0;max-width:340px;justify-self:center">
+          <img src="../img/manual_it.jpg" alt="Copertina del manuale d'uso del miniVIC" loading="lazy" width="910" height="1287">
+        </figure>
+      </div>
+
+      <h3 style="margin-top:36px">Musica e SD card</h3>
+      <p><a href="https://github.com/Boogs77/miniVIC_music"><b>miniVIC Music</b></a> raccoglie brani per i due chip AY-3-8910, come programmi per la SD card. <a href="https://github.com/Boogs77/bo6502-SDbuilder"><b>BO6502 SD Builder</b></a> è un insieme di strumenti Python che mettono giochi, applicazioni e brani nell'immagine RAW della SD card letta dal menu del BIOS. Con questi strumenti si crea anche la SD predefinita dell'emulatore.</p>
     </div>
   </section>
 
@@ -271,6 +290,7 @@
         <li><time>2026-10</time><b>Emulatore e giochi</b><p>Vanno online l'emulatore nel browser e la raccolta di giochi del miniVIC.</p></li>
         <li><time>2026-10</time><b>BIOS KEYB/SD e applicazioni</b><p>Tastiera estesa, scrittura su tutte le SD card e otto applicazioni da ufficio.</p></li>
         <li><time>2026-11</time><b>L'hardware del miniVIC</b><p>Pubblicati schema, PCB e mappa di memoria, con il BIOS 03.11.26 KEYB/SD.</p></li>
+        <li><time>2026-11</time><b>Manuale d'uso</b><p>Il manuale del miniVIC in italiano e in inglese, con il BIOS 16.11.26 KEYB/SD R2; lo strumento per creare la SD diventa pubblico.</p></li>
       </ol>
     </div>
   </section>
